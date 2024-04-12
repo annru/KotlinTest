@@ -1,0 +1,9 @@
+ext {
+
+
+  kotlin_version = "1.9.0"
+
+  work_version = "2.7.1"
+
+
+}
