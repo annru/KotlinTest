@@ -20,10 +20,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         val routerPath: String = when (it) {
             AppFunctionDemo.BluetoothDemo.name -> ArouterPath.BluetoothDemoActivity
 
-            AppFunctionDemo.PhotoPermissionDemo.name -> {
-                ArouterPath.PhotoPermissionDemoActivity
+            AppFunctionDemo.PhotoPermissionDemo.name -> ArouterPath.PhotoPermissionDemoActivity
 
-            }
+            AppFunctionDemo.RecyclerViewDemo.name -> ArouterPath.RecyclerViewDemoActivity
 
 
             else -> {
