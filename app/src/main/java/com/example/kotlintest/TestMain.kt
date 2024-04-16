@@ -30,7 +30,6 @@ fun main() {
     val b = CompareInfo("a", 12)
     println("result====${a == b}")
 
-    findColor()
 
 
     val age = -1
@@ -57,14 +56,7 @@ fun findlastmement() {
     println(members.last())
 }
 
-fun findColor() {
-    val colorBean = findByRgb("#FF7F000")
-    println("找到了颜色对象吗？----${colorBean?.colorName}")
-}
 
-
-@OptIn(ExperimentalStdlibApi::class)
-fun findByRgb(rgb: String): Color? = Color.entries.find { it.rgb == rgb }
 
 
 

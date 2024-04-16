@@ -1,6 +1,5 @@
 package com.example.kotlintest.ui
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.alibaba.android.arouter.facade.annotation.Route
@@ -14,16 +13,25 @@ import com.example.kotlintest.databinding.ActivityMainBinding
 @Route(path = ArouterPath.MainActivity)
 class MainActivity : BaseActivity<ActivityMainBinding>() {
 
-    private val bannerAdapter = BannerAdapter {
-        when (it) {
-            AppFunctionDemo.BluetoothDemo.name -> {
-                ARouter.getInstance().build(ArouterPath.BluetoothDemoActivity).navigation()
-//                startActivity(Intent(this,BluetoothDemoActivity::class.java))
-            }
-        }
-    }
 
     override fun setContentView(): Int = R.layout.activity_main
+
+    private val bannerAdapter = BannerAdapter {
+        val routerPath: String = when (it) {
+            AppFunctionDemo.BluetoothDemo.name -> ArouterPath.BluetoothDemoActivity
+
+            AppFunctionDemo.PhotoPermissionDemo.name -> {
+                ArouterPath.PhotoPermissionDemoActivity
+
+            }
+
+
+            else -> {
+                ""
+            }
+        }
+        ARouter.getInstance().build(routerPath).navigation()
+    }
 
     val data = AppFunctionDemo.getFunctionsList()
 

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">KotlinTest</string>
+    <string name="android_14">Android 14新特性</string>
 </resources>

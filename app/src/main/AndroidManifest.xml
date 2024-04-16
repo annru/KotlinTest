@@ -22,12 +22,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinTest">
-        <activity
-            android:name=".ui.BaseActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.SecondActivity"
-            android:exported="false" />
+
         <activity
             android:name=".ui.MainActivity"
             android:exported="true">
@@ -37,7 +32,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.BluetoothDemoActivity" />
+
+        <activity
+            android:name=".ui.SecondActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.BluetoothDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.PhotoPermissionDemoActivity"
+            android:exported="true"
+            android:label="Android 14新特性" />
     </application>
 
 </manifest>

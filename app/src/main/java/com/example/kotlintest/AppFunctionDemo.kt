@@ -6,6 +6,7 @@ package com.example.kotlintest
 sealed class AppFunctionDemo(val name: String) {
     data object BluetoothDemo : AppFunctionDemo("蓝牙")
     data object RecyclerViewDemo : AppFunctionDemo("RecyclerView")
+    data object PhotoPermissionDemo : AppFunctionDemo("选择性照片和视频访问授权")
 
 
     companion object {
